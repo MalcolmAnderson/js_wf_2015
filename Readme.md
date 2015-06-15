@@ -23,3 +23,4 @@ Build like this
 ./jake.sh (Unix/Mac)
 
 
+npm install <package_name> --save-dev --ignore-scripts

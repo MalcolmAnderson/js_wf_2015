@@ -2,6 +2,7 @@
     "use strict";
 
     var version = require("../util/version_checker.js");
+    var jshint = require("simplebuild-jshint");
 
     var startTime =Date.now();
 
@@ -18,8 +19,22 @@
     task( "lint", [ "lintNode", "lintClient" ]);
 
     task( "lintNode", function() {
-        console.log("Linting Node.js code: - TODO = add Code");
-    });
+        process.stdout.write("Linting Node.js code: ");
+        jshint.checkFiles({
+            files: ["build/**/*.js" ],
+            options: {
+                node: true
+            },
+            globals: {
+                jake: false,
+                desc: false,
+                task: false,
+                directory: false,
+                complete: false,
+                fail: false
+            }
+        }, complete, fail);
+    }, {async: true});
 
     task( "lintClient", function() {
         console.log("Linting browser code: - TODO = add Code");

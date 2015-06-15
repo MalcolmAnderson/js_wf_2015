@@ -24,3 +24,4 @@ Build like this
 
 
 npm install <package_name> --save-dev --ignore-scripts
+npm rebuild

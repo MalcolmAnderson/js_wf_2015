@@ -5,3 +5,9 @@ http://www.letscodejavascript.com/v3/episodes/lab/1
 
 Check jake into version control
 
+
+get rid of tempoary files
+git clean -fdx
+
+
+

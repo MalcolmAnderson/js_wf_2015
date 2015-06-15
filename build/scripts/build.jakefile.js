@@ -3,6 +3,7 @@
 
     var version = require("../util/version_checker.js");
     var jshint = require("simplebuild-jshint");
+    var jshintConfig = require("../config/jshint.conf.js");
 
     var startTime =Date.now();
 
@@ -22,23 +23,19 @@
         process.stdout.write("Linting Node.js code: ");
         jshint.checkFiles({
             files: ["build/**/*.js" ],
-            options: {
-                node: true
-            },
-            globals: {
-                jake: false,
-                desc: false,
-                task: false,
-                directory: false,
-                complete: false,
-                fail: false
-            }
+            options: jshintConfig.nodeOptions,
+            globals: jshintConfig.nodeGlobals
         }, complete, fail);
     }, {async: true});
 
     task( "lintClient", function() {
-        console.log("Linting browser code: - TODO = add Code");
-    });
+        process.stdout.write("Linting browser code: ");
+        jshint.checkFiles({
+            files: ["src/client/**/*.js" ],
+            options: jshintConfig.nodeOptions,
+            globals: jshintConfig.nodeGlobals
+        }, complete, fail);
+    }, {async: true});
 
 
     //*** CHECK VERSION

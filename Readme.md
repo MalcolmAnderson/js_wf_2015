@@ -25,3 +25,7 @@ Build like this
 
 npm install <package_name> --save-dev --ignore-scripts
 npm rebuild
+
+
+Current location 43:18
+http://www.letscodejavascript.com/v3/episodes/lessons_learned/16

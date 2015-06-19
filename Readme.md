@@ -55,5 +55,5 @@ $ git push http://example.com/repo.git
 
 Current location 43:18
 Current location 51:34
-
+Current location 60:11
 http://www.letscodejavascript.com/v3/episodes/lessons_learned/16

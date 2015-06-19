@@ -5,7 +5,13 @@
     "use strict";
 
     module.exports = {
-        distDir: "generated/dist"
+        distDir: "generated/dist",
+        clientDistDir: "generated/dist/client",
+
+        clientDir: "src/client",
+        serverDir: "src/server",
+        serverEntryPoint: "src/run.js"
+
     };
 
 }());

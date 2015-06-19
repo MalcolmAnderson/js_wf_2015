@@ -54,12 +54,14 @@
 
     });
 
-    task("buildClient", function() {
+    task("buildClient", [ paths.clientDistDir ], function() {
         console.log("Copying client code: .");
+        shell.cp(paths.clientDir + "/*.html", paths.clientDir + "/*.css", paths.clientDistDir);
     });
 
     task("buildServer", function() {
         console.log("Copying server code: .");
+        shell.cp("-R", paths.serverDir, paths.serverEntryPoint, paths.distDir);
     });
 
 
@@ -80,6 +82,7 @@
     //*** DIRECTORIES
 
     directory(paths.distDir);
+    directory(paths.clientDistDir);
 
 
 }());

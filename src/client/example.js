@@ -4,11 +4,12 @@
 (function() {
     "use strict";
 
-    var example = windows.example = {};
+    var constants = require("./constants.js");
 
-    var REQUIRED_FIELD_CLASS = "example-required";
+    //var example = windows.example = {};
 
-    example.validateTextField = function validateTextField(field) {
-        field.setAttribute("class", REQUIRED_FIELD_CLASS);
-    }
+
+    exports.validateTextField = function validateTextField(field) {
+        field.setAttribute("class", constants.REQUIRED_FIELD_CLASS);
+    };
 }());

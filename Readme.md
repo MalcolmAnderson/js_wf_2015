@@ -23,8 +23,14 @@ Build like this
 ./jake.sh (Unix/Mac)
 
 
+
+--- adding a package
 npm install <package_name> --save-dev --ignore-scripts
+git add .
+git commit -am <TK appropiarte message>
 npm rebuild
+git status (expect no changes from commit)
+
 
 
 Current location 43:18

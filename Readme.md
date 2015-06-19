@@ -25,7 +25,7 @@ Build like this
 
 
 --- adding a package
-npm install <package_name> --save-dev --ignore-scripts
+npm install <package_name> --ignore-scripts  --save-dev 
 git add .
 git commit -am <TK appropiarte message>
 npm rebuild
@@ -42,4 +42,6 @@ or
 
 
 Current location 43:18
+Current location 51:34
+
 http://www.letscodejavascript.com/v3/episodes/lessons_learned/16

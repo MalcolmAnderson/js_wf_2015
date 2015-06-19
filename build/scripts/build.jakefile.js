@@ -47,7 +47,8 @@
     task("build", [ "prepDistDir", "buildClient", "buildServer"]);
 
     //placeholders
-    task("prepDistDir", function() {
+    task("prepDistDir", [ "generated/dist" ], function() {
+
     });
 
     task("buildClient", function() {
@@ -71,5 +72,11 @@
             strict: true
         }, complete, fail);
     }, {async: true});
+
+
+    //*** DIRECTORIES
+
+    directory("generated/dist");
+
 
 }());

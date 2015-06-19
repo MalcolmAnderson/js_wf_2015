@@ -51,9 +51,11 @@
     });
 
     task("buildClient", function() {
+        console.log("Copying client code: .");
     });
 
     task("buildServer", function() {
+        console.log("Copying server code: .");
     });
 
 

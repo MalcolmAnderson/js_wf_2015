@@ -4,6 +4,8 @@
     var version = require("../util/version_checker.js");
     var jshint = require("simplebuild-jshint");
     var jshintConfig = require("../config/jshint.conf.js");
+    var shell = require("shelljs");
+    var paths = require("../config/paths.js");
 
     var startTime =Date.now();
 
@@ -47,7 +49,8 @@
     task("build", [ "prepDistDir", "buildClient", "buildServer"]);
 
     //placeholders
-    task("prepDistDir", [ "generated/dist" ], function() {
+    task("prepDistDir", function() {
+        shell.rm("-rf", paths.distDir);
 
     });
 
@@ -76,7 +79,7 @@
 
     //*** DIRECTORIES
 
-    directory("generated/dist");
+    directory(paths.distDir);
 
 
 }());

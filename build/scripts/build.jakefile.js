@@ -7,8 +7,11 @@
 
     var startTime =Date.now();
 
+
+    //*** GENERAL
+
     desc( "Lint and test");
-    task( "default", [ "version", "lint" ], function() {
+    task( "default", [ "version", "lint", "build" ], function() {
         var elapsedSeconds = (Date.now() - startTime) / 1000;
         console.log("\n\nBUILD OK (" + elapsedSeconds.toFixed(2) + "s)");
     });
@@ -36,6 +39,22 @@
             globals: jshintConfig.nodeGlobals
         }, complete, fail);
     }, {async: true});
+
+
+    //*** BUILD
+
+    desc("Build distribution package");
+    task("build", [ "prepDistDir", "buildClient", "buildServer"]);
+
+    //placeholders
+    task("prepDistDir", function() {
+    });
+
+    task("buildClient", function() {
+    });
+
+    task("buildServer", function() {
+    });
 
 
     //*** CHECK VERSION

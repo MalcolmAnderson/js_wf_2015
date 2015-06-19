@@ -30,6 +30,14 @@ git add .
 git commit -am <TK appropiarte message>
 npm rebuild
 git status (expect no changes from commit)
+// if there are changes, the changes need to be added to .gitignore 
+
+
+--- build options
+./jake.sh
+or
+./jake.sh -T
+
 
 
 

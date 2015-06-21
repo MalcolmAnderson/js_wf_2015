@@ -5,6 +5,8 @@
     "use strict";
 
     module.exports = {
+        karmaConfig: "build/config/karma.conf.js",
+
         distDir: "generated/dist",
         clientDistDir: "generated/dist/client",
         clientDistBundle: "generated/dist/client/bundle.js",

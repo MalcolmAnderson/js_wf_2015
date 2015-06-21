@@ -7,6 +7,7 @@
     var shell = require("shelljs");
     var paths = require("../config/paths.js");
     var browserify = require("../util/browserify_runner.js");
+    var karma = require("../util/karma_runner.js");
 
     var startTime =Date.now();
 
@@ -47,6 +48,14 @@
             options: jshintConfig.nodeOptions,
             globals: jshintConfig.nodeGlobals
         }, complete, fail);
+    }, {async: true});
+
+
+
+    //*** TEST
+    desc("Start Karma server -- run this first");
+    task("karma", function(){
+        karma.serve(paths.karmaConfig, complete, fail);
     }, {async: true});
 
 

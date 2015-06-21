@@ -9,13 +9,6 @@
       // base path that will be used to resolve all patterns (eg. files, exclude)
       basePath: '../../',
 
-      // base path that will be used to resolve all patterns (eg. files, exclude)
-      basePath: '../../',
-
-      // frameworks to use
-      // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-      frameworks: ['mocha', 'expect', 'commonjs'],
-
       // frameworks to use
       // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
       frameworks: ['mocha', 'expect', 'commonjs'],
@@ -61,5 +54,4 @@
       singleRun: false
     });
   };
->>>>>>> add_karma-commonjs
 }());

@@ -15,6 +15,7 @@
     //*** GENERAL
 
     desc( "Lint and test");
+    //task( "default", [ "version", "lint", "test", "build" ], function() {
     task( "default", [ "version", "lint", "build" ], function() {
         var elapsedSeconds = (Date.now() - startTime) / 1000;
         console.log("\n\nBUILD OK (" + elapsedSeconds.toFixed(2) + "s)");
@@ -58,6 +59,19 @@
         karma.serve(paths.karmaConfig, complete, fail);
     }, {async: true});
 
+    /*
+    desc("Run tests");
+    task("test", function(){
+        console.log("Testing browser code:");
+        karma.runTests({
+            configFile: paths.karmaConfig,
+            browsers: {
+
+            },
+            strict: true
+        }, complete, fail);
+    }, {async: true});
+    */
 
     //*** BUILD
 

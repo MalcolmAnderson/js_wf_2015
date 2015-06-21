@@ -10,6 +10,11 @@
 
 
     exports.validateTextField = function validateTextField(field) {
-        field.setAttribute("class", constants.REQUIRED_FIELD_CLASS);
+        if (field.value) {
+            field.removeAttribute("class");
+        }
+        else {
+            field.setAttribute("class", constants.REQUIRED_FIELD_CLASS);
+        }
     };
 }());

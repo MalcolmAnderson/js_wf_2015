@@ -1,3 +1,7 @@
 .idea/workspace.xml
 .bin
 generated/
+
+#npm module binaries (built by 'npm rebuild' and similar
+node_modules/karma/node_modules/socket.io/node_modules/socket.io-client/node_modules/ws/builderror.log
+node_modules/karma/node_modules/socket.io/node_modules/socket.io-client/node_modules/ws/build/
